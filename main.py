@@ -39,5 +39,7 @@ if __name__ == '__main__':
                 algorithm_hashcat_code=hash_group,
                 hash_values=hash_values
             )
+    else:
+        print("\n", "[-] Sorry! No suitable match detected.")
 
     print(constants.GOOD_LUCK)

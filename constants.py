@@ -1,6 +1,8 @@
 from tabulate import tabulate
+
 from algorithms.identifiers.md5 import MD5
 from algorithms.identifiers.sha2_256 import SHA2256
+from algorithms.identifiers.ntlm import NTLM
 
 WELCOME = """
  _   _           _       _   _             _            
@@ -26,6 +28,7 @@ GOOD_LUCK = """
 ACTIVE_ALGORITHMS = {
     MD5: 0,
     SHA2256: 1400,
+    NTLM: 1000
 }
 
 ALGORITHMS = {"102020": "ADLER-32", "102040": "CRC-32", "102060": "CRC-32B", "101020": "CRC-16",

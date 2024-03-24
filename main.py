@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description="Identify hashes from a wordlist th
 parser.add_argument('hash_list_file', help='path to the file containing hashes to identify')
 
 
-def hash_list_parser(hash_list_file_path: str):
+def parse_hash_list(hash_list_file_path: str):
     with open(hash_list_file_path, 'r') as f:
         hash_list = f.read().splitlines()
     return hash_list
@@ -19,7 +19,6 @@ def make_hash_groups_dir():
     now = datetime.now().strftime("%Y%m%d%H%M%S")
     hash_groups_dirname = f"hashes-{now}"
     os.makedirs(hash_groups_dirname, exist_ok=True)
-
     return hash_groups_dirname
 
 
@@ -29,13 +28,11 @@ if __name__ == '__main__':
     print(constants.WELCOME)
     print(constants.SOCIAL_INFO, '\n')
 
-    algorithms = [
-        MD5
-    ]
+    algorithms = [MD5]
 
     possible_hashes = {}
 
-    for hash_value in hash_list_parser(args.hash_list_file):
+    for hash_value in parse_hash_list(args.hash_list_file):
         validated_algorithms = []
 
         for algorithm in algorithms:

@@ -2,34 +2,11 @@ from tabulate import tabulate
 from algorithms.identifiers.md5 import MD5
 
 WELCOME = """
-
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XXXXXXXXXXXXNNN0kdooooodkKNNNXXXXXXXXXXX
-    XXXXXXXXXNN0oc'',,.,,'','.,cdKNNXXXXXXXX
-    XXXXXXXNXd;';';;'',,.,''.,,',.:ONNXXXXXX
-    XXXXXXNO,'',;;,::';;d;'';,;,'.'';KNXXXXX
-    XXXXNNd''..,;;,;;;c,;,;,,'':.',.'.0NXXXX
-    XXXXNO'.,...l.:occ',,,.c:c; :',,.,.XNXXX
-    XXXNN';''.;,c;;x;x'c;,co;lc c;;., 'oNXXX
-    XXXNX.,;.;,:.;;:;,;',':;;,l.;;';,.;,NNXX
-    XXXNX.,,.;,;.;',;';''';,;.l ,,,;'.;,NNXX
-    XXXNN;,''.,.c;,x,k'c;,:d;oc :,,.,.'dNXXX
-    XXXXNK.','..c.,c:,,;;'.;:;,.;'',';,XNXXX
-    XXXXXN0.'..'';.',,:,::;,;',:''.',,XNXXXX
-    XXXXXXNK:.'',,,,,'''c,',,,:,:','oXNXXXXX
-    XXXXXXXXN0c'.'.,'..;;,''';,;.;lKNXXXXXXX
-    XXXXXXXXXXNXkl:'.'.....'.,co0NNXXXXXXXXX
-    XXXXXXXXXXXXXNNXX0kkxkO0XXNNXXXXXXXXXXXX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
  _   _           _       ____                          
 | | | | __ _ ___| |__   |  _ \ __ _ _ __ ___  ___ _ __ 
 | |_| |/ _` / __| '_ \  | |_) / _` | '__/ __|/ _ \ '__|
 |  _  | (_| \__ \ | | | |  __/ (_| | |  \__ \  __/ |   
 |_| |_|\__,_|___/_| |_| |_|   \__,_|_|  |___/\___|_|   
-
 """
 
 SOCIAL_INFO = tabulate([
@@ -38,13 +15,11 @@ SOCIAL_INFO = tabulate([
 ])
 
 GOOD_LUCK = """
-
   ____  ___   ___  ____    _    _   _  ____ _  __
  / ___|/ _ \ / _ \|  _ \  | |  | | | |/ ___| |/ /
 | |  _| | | | | | | | | | | |  | | | | |   | ' / 
 | |_| | |_| | |_| | |_| | | |__| |_| | |___| . \ 
  \____|\___/ \___/|____/  |_____\___/ \____|_|\_\
-
 """
 
 ACTIVE_ALGORITHMS = {

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     print(constants.WELCOME)
-    print(constants.SOCIAL_INFO, '\n')
+    print(constants.SOCIAL_INFO)
 
     possible_hashes = {}
 
@@ -40,6 +40,7 @@ if __name__ == '__main__':
                 hash_values=hash_values
             )
     else:
-        print("\n", "[-] Sorry! No suitable match detected.")
+        print("\n\n[-] Sorry! No suitable match detected.")
 
-    print(constants.GOOD_LUCK)
+    print("\n", constants.GOOD_LUCK)
+    print()

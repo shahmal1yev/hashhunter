@@ -1,9 +1,7 @@
 import argparse
-import os
 from tabulate import tabulate
 
 import constants
-from algorithms.identifiers.md5 import MD5
 from helpers import parse_hash_list, make_hash_groups_dir, write_hash_group_file
 
 parser = argparse.ArgumentParser(description="Identify hashes from a wordlist that integrates with HashCat")
@@ -16,17 +14,15 @@ if __name__ == '__main__':
     print(constants.WELCOME)
     print(constants.SOCIAL_INFO, '\n')
 
-    algorithms = [MD5]
-
     possible_hashes = {}
 
     for hash_value in parse_hash_list(args.hash_list_file):
         validated_algorithms = []
 
-        for algorithm in algorithms:
+        for algorithm, hashcat_code in constants.ACTIVE_ALGORITHMS.items():
             instance = algorithm(hash_value)
             if instance.validate():
-                possible_hashes.setdefault(algorithm.__name__, []).append(hash_value)
+                possible_hashes.setdefault(hashcat_code, []).append(hash_value)
                 validated_algorithms.append(algorithm.__name__)
 
         if validated_algorithms:
@@ -40,7 +36,7 @@ if __name__ == '__main__':
         for hash_group, hash_values in possible_hashes.items():
             write_hash_group_file(
                 hash_group_dirname=hash_group_dirname,
-                algorithm_name=hash_group.lower(),
+                algorithm_hashcat_code=hash_group,
                 hash_values=hash_values
             )
 

@@ -1,4 +1,5 @@
 from tabulate import tabulate
+from algorithms.identifiers.md5 import MD5
 
 WELCOME = """
 
@@ -45,6 +46,10 @@ GOOD_LUCK = """
  \____|\___/ \___/|____/  |_____\___/ \____|_|\_\
 
 """
+
+ACTIVE_ALGORITHMS = {
+    MD5: 0
+}
 
 ALGORITHMS = {"102020": "ADLER-32", "102040": "CRC-32", "102060": "CRC-32B", "101020": "CRC-16",
               "101040": "CRC-16-CCITT", "104020": "DES(Unix)", "101060": "FCS-16", "103040": "GHash-32-3",

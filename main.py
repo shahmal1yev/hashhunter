@@ -6,7 +6,7 @@ from tabulate import tabulate
 import constants
 
 parser = argparse.ArgumentParser(description="Identify hashes from a wordlist that integrates with HashCat")
-parser.add_argument('hash_list_file', help='path to the file containing hashes to identify')
+parser.add_argument('-H', dest="hash_list_file", help='path to the file containing hashes to identify')
 
 
 def parse_hash_list(hash_list_file_path: str):

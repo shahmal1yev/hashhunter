@@ -1,25 +1,13 @@
 import argparse
 import os
-from datetime import datetime
-from algorithms.identifiers.md5 import MD5
 from tabulate import tabulate
+
 import constants
+from algorithms.identifiers.md5 import MD5
+from helpers import parse_hash_list, make_hash_groups_dir
 
 parser = argparse.ArgumentParser(description="Identify hashes from a wordlist that integrates with HashCat")
 parser.add_argument('-H', dest="hash_list_file", help='path to the file containing hashes to identify')
-
-
-def parse_hash_list(hash_list_file_path: str):
-    with open(hash_list_file_path, 'r') as f:
-        hash_list = f.read().splitlines()
-    return hash_list
-
-
-def make_hash_groups_dir():
-    now = datetime.now().strftime("%Y%m%d%H%M%S")
-    hash_groups_dirname = f"hashes-{now}"
-    os.makedirs(hash_groups_dirname, exist_ok=True)
-    return hash_groups_dirname
 
 
 if __name__ == '__main__':

@@ -4,7 +4,7 @@ from tabulate import tabulate
 
 import constants
 from algorithms.identifiers.md5 import MD5
-from helpers import parse_hash_list, make_hash_groups_dir
+from helpers import parse_hash_list, make_hash_groups_dir, write_hash_group_file
 
 parser = argparse.ArgumentParser(description="Identify hashes from a wordlist that integrates with HashCat")
 parser.add_argument('-H', dest="hash_list_file", help='path to the file containing hashes to identify')
@@ -35,10 +35,13 @@ if __name__ == '__main__':
             ], headers=[f"Possible algorithms for {hash_value}"]))
 
     if possible_hashes:
-        hash_group_dir_name = make_hash_groups_dir()
+        hash_group_dirname = make_hash_groups_dir()
 
-        for hash_group, hashes in possible_hashes.items():
-            with open(os.path.join(hash_group_dir_name, f"{hash_group.lower()}.txt"), "a") as hash_group_file:
-                hash_group_file.writelines(f"{hash}\n" for hash in hashes)
+        for hash_group, hash_values in possible_hashes.items():
+            write_hash_group_file(
+                hash_group_dirname=hash_group_dirname,
+                algorithm_name=hash_group.lower(),
+                hash_values=hash_values
+            )
 
     print(constants.GOOD_LUCK)

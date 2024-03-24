@@ -13,3 +13,8 @@ def make_hash_groups_dir():
     hash_groups_dirname = f"hashes-{now}"
     os.makedirs(hash_groups_dirname, exist_ok=True)
     return hash_groups_dirname
+
+
+def write_hash_group_file(hash_group_dirname: str, algorithm_name: str, hash_values: list) -> None:
+    with open(os.path.join(hash_group_dirname, f"{algorithm_name}.txt"), "a") as hash_group_file:
+        hash_group_file.writelines(f"{hash_value}\n" for hash_value in hash_values)

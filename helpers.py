@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from colorama import Fore, Style
 
 
 def parse_hash_list(hash_list_file_path: str):
@@ -29,3 +30,10 @@ def write_hash_group_file(hash_group_dirname: str, algorithm_hashcat_code: str, 
 def print_to_file(content, output):
     if output:
         print(content, file=output)
+
+
+def colored_output(text, color="WHITE"):
+    color = color.upper()
+    text = getattr(Fore, color, None) + text + Style.RESET_ALL
+
+    return text

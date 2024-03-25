@@ -2,7 +2,7 @@ import argparse
 from tabulate import tabulate
 
 import constants
-from helpers import parse_hash_list, make_hash_groups_dir, write_hash_group_file, print_to_file
+from helpers import parse_hash_list, make_hash_groups_dir, write_hash_group_file, print_to_file, colored_output
 
 parser = argparse.ArgumentParser(prog='hashhunter',
                                  description="Identify hashes from a wordlist that integrates with HashCat")
@@ -18,8 +18,8 @@ if __name__ == '__main__':
 
     output = open(args.output_file, 'w+') if args.output_file else None
 
-    print(constants.WELCOME)
-    print(constants.SOCIAL_INFO)
+    print(colored_output(constants.WELCOME, 'green'))
+    print(colored_output(constants.SOCIAL_INFO, 'yellow'))
     print_to_file(constants.WELCOME, output)
     print_to_file(constants.SOCIAL_INFO, output)
 
@@ -51,12 +51,12 @@ if __name__ == '__main__':
 
         info = "\n\n" + tabulate(table, headers="keys", tablefmt="fancy_grid")
 
-        print(info)
+        print(colored_output(info, 'green'))
         print_to_file(info, output)
 
     else:
         info = f"\n\n[-] Sorry! No suitable match detected."
-        print(info)
+        print(colored_output(info, 'red'))
         print_to_file(info, output)
 
     if args.group:
@@ -74,7 +74,7 @@ if __name__ == '__main__':
                 )
 
     info = "\n" + constants.GOOD_LUCK
-    print(info)
+    print(colored_output(info, 'green'))
     print()
     print_to_file(info, output)
     print_to_file("", output)

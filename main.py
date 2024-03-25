@@ -6,7 +6,7 @@ from helpers import parse_hash_list, make_hash_groups_dir, write_hash_group_file
 
 parser = argparse.ArgumentParser(prog='hashhunter',
                                  description="Identify hashes from a wordlist that integrates with HashCat")
-parser.add_argument('-H', dest="hash_list_file", help='Path to the file containing hashes to identify')
+parser.add_argument('-H', dest="hash_list_file", help='Path to the file containing hashes to identify', required=True)
 parser.add_argument('-pO', '--plain-output', dest="output_file", help='Save all output to a file')
 parser.add_argument('-g', '--group', dest="group",
                     help='Group hash values and save them with names based on HashCat\'s hash modes',

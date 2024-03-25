@@ -16,7 +16,7 @@ HashHunter's newest feature allows users to directly upload a hash list to the t
 
 ### Usage
 
-- Identify hash values from a specified file and save all output to a file:
+- Identify hash values from a specified file and save only the most possible hash groups:
 
 ```shell
 hashunter -H path/to/hash_list.txt --group
@@ -28,7 +28,7 @@ hashunter -H path/to/hash_list.txt --group
 hashunter -H path/to/hash_list.txt --group -a
 ```
 
-- Identify hash values from a specified file and save only the most possible hash groups:
+- Identify hash values from a specified file and save all output to a file:
 
 ```shell
 hashunter -H path/to/hash_list.txt -pO path/to/output.txt

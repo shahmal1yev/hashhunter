@@ -2,9 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Identifier(ABC):
-    @abstractmethod
-    def get_name(self) -> str:
-        pass
 
     @abstractmethod
     def get_fix_length(self) -> int:

@@ -2,12 +2,11 @@ from algorithms.interfaces.identifier import Identifier
 
 
 class MD5(Identifier):
+    ALGORITHM_NAME = "MD5"
+
     def __init__(self, hash_value: str):
         self.hash_value = hash_value
         self.length = self.get_fix_length()
-
-    def get_name(self) -> str:
-        return 'MD5'
 
     def get_fix_length(self) -> int:
         return 32

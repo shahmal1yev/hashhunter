@@ -3,8 +3,14 @@ from datetime import datetime
 
 
 def parse_hash_list(hash_list_file_path: str):
+    hash_list = []
+
     with open(hash_list_file_path, 'r') as f:
-        hash_list = f.read().splitlines()
+        for line in f:
+            hash_value = line.strip()
+            if hash_value not in hash_list:
+                hash_list.append(hash_value)
+
     return hash_list
 
 

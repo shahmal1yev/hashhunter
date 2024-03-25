@@ -18,3 +18,8 @@ def make_hash_groups_dir():
 def write_hash_group_file(hash_group_dirname: str, algorithm_hashcat_code: str, hash_values: list) -> None:
     with open(os.path.join(hash_group_dirname, f"{algorithm_hashcat_code}.txt"), "a") as hash_group_file:
         hash_group_file.writelines(f"{hash_value}\n" for hash_value in hash_values)
+
+
+def print_to_file(content, output):
+    if output:
+        print(content, file=output)

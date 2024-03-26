@@ -1,4 +1,4 @@
-# HashHunter
+# Hash Hunter (hash-identifier)
 
 HashHunter is a Python tool that identifies hashes from a wordlist, integrating with HashCat.
 
@@ -53,4 +53,5 @@ hashunter -H path/to/hash_list.txt -pO path/to/output.txt
 ### Authors
 
 - [@shahmal1yev](https://www.github.com/shahmal1yev)
+- [@blackploit](https://www.github.com/blackploit)
 

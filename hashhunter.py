@@ -40,13 +40,13 @@ if __name__ == '__main__':
 
         for hash_value, hashcat_codes in possible_hashes.items():
             sorted_hashcat_codes = sorted(hashcat_codes)
-
+            seperator = " / "
             table.setdefault('Hash Value', []).append(hash_value)
             table.setdefault('Most Possible', []).append(
-                ", ".join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].algorithm_name,
+                seperator.join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].algorithm_name,
                               sorted_hashcat_codes[:constants.MOST_POSSIBLE_LENGTH])))
             table.setdefault('Least Possible', []).append(
-                ", ".join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].algorithm_name,
+                seperator.join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].algorithm_name,
                               sorted_hashcat_codes[constants.MOST_POSSIBLE_LENGTH:])))
 
         info = "\n\n" + tabulate(table, headers="keys", tablefmt="fancy_grid")

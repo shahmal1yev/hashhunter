@@ -1,7 +1,19 @@
-from abc import abstractmethod
+from abc import ABC, abstractmethod
 
-from algorithms.interfaces.has_byte_size import HasByteSize
 from helpers import is_hex_str
+
+
+class HasByteSize(ABC):
+    @property
+    @abstractmethod
+    def byte_size(self) -> int:
+        pass
+
+    def get_valid_character_length(self) -> int:
+        return int(self.byte_size * 2)
+
+    def get_valid_bit_length(self) -> int:
+        return int(self.byte_size * 8)
 
 
 class Identifier(HasByteSize):

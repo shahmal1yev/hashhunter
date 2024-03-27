@@ -1,9 +1,6 @@
 from tabulate import tabulate
 
-from algorithms.identifiers.md5 import MD5
-from algorithms.identifiers.sha2_256 import SHA2256
-from algorithms.identifiers.ntlm import NTLM
-from algorithms.identifiers.md4 import MD4
+from algorithms.identifiers import MD4, MD5, NTLM, SHA2256
 
 WELCOME = """
     __  __           __       __  __            __           

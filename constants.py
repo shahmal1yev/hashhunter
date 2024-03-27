@@ -14,7 +14,8 @@ WELCOME = """
 
 SOCIAL_INFO = tabulate([
     ["GitHub", "https://github.com/shahmal1yev"],
-    ["LinkedIn", "https://linkedin.com/in/shahmal1yev"]
+    ["LinkedIn", "https://linkedin.com/in/shahmal1yev"],
+    ["Repository", "https://github.com/shahmal1yev/hashhunter"]
 ])
 
 GOOD_LUCK = """

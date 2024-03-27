@@ -1,6 +1,6 @@
 # Hash Hunter (hash-identifier)
 
-HashHunter is a Python tool that identifies hashes from a wordlist, integrating with HashCat.
+Hash Hunter is a Python tool that identifies hashes from a wordlist, integrating with HashCat.
 
 ![img_1.png](build/hashhunter/img.png)
 
@@ -25,13 +25,13 @@ hashunter -H path/to/hash_list.txt --group
 - Identify hash values from a specified file and save both the most and least possible hash groups:
 
 ```shell
-hashunter -H path/to/hash_list.txt --group -a
+hashhunter -H path/to/hash_list.txt --group -a
 ```
 
 - Identify hash values from a specified file and save all output to a file:
 
 ```shell
-hashunter -H path/to/hash_list.txt -pO path/to/output.txt
+hashhunter -H path/to/hash_list.txt -pO path/to/output.txt
 ```
 
 ### Parameters

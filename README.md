@@ -47,8 +47,26 @@ hashhunter -H path/to/hash_list.txt -pO path/to/output.txt
 
 - MD4
 - MD5
-- SHA2-256
+- Half MD5
 - NTLM
+- SHA1
+- SHA2-224
+- SHA2-256
+- SHA2-384
+- SHA2-512
+- SHA3-224
+- SHA3-256
+- SHA3-384
+- SHA3-512
+- Keccak-224
+- Keccak-256
+- Keccak-384
+- Keccak-512
+- RIPEMD160,
+- BLAKE2b512
+- GOST R 34.11-2012 (Streebog) 256-bit
+- GOST R 34.11-2012 (Streebog) 512-bit
+- Whirlpool
 
 ### Authors
 

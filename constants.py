@@ -1,6 +1,8 @@
 from tabulate import tabulate
 
-from algorithms.identifiers import MD4, MD5, NTLM, SHA2256
+from algorithms.identifiers import (MD4, MD5, NTLM, SHA2224, SHA2256, SHA2384, SHA2512, SHA3224, SHA3256, SHA3384,
+                                    SHA3512, RIPEMD160, BLAKE2b512, GOSTR34112012256, GOSTR34112012512, HalfMD5,
+                                    Keccak224, Keccak256, Keccak384, Keccak512, Whirlpool)
 
 WELCOME = """
     __  __           __       __  __            __           
@@ -24,10 +26,27 @@ GOOD_LUCK = """
 """
 
 ACTIVE_ALGORITHMS = {
-    0: MD5,
-    900: MD4,
-    1000: NTLM,
-    1400: SHA2256
+    0:      MD5,
+    900:    MD4,
+    1000:   NTLM,
+    1300:   SHA2224,
+    1400:   SHA2256,
+    10800:  SHA2384,
+    1700:   SHA2512,
+    17300:  SHA3224,
+    17400:  SHA3256,
+    17500:  SHA3384,
+    17600:  SHA3512,
+    6000:   RIPEMD160,
+    600:    BLAKE2b512,
+    11700:  GOSTR34112012256,
+    11800:  GOSTR34112012512,
+    5100:   HalfMD5,
+    17700:  Keccak224,
+    17800:  Keccak256,
+    17900:  Keccak384,
+    18000:  Keccak512,
+    6100:   Whirlpool
 }
 
 MOST_POSSIBLE_LENGTH = 2

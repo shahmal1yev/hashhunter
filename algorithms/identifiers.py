@@ -66,7 +66,7 @@ class RIPEMD160(Identifier):
     byte_size: int = 20
 
 
-class BLAKE2B512(Identifier):
+class BLAKE2b512(Identifier):
     algorithm_name: str = "BLAKE2b-512"
     byte_size: int = 64
 

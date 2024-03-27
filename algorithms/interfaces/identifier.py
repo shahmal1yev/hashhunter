@@ -5,14 +5,14 @@ from helpers import is_hex_str
 
 
 class Identifier(HasByteSize):
-    @property
-    @abstractmethod
-    def algorithm_name(self) -> str:
-        pass
+    hash_value: str = None
+
+    def __init__(self, hash_value: str):
+        self.hash_value = hash_value
 
     @property
     @abstractmethod
-    def hash_value(self) -> str:
+    def algorithm_name(self) -> str:
         pass
 
     def validate_character_length(self) -> bool:

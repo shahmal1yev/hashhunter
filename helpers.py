@@ -1,4 +1,5 @@
 import os
+import string
 from datetime import datetime
 from colorama import Fore, Style
 
@@ -37,3 +38,7 @@ def colored_output(text, color="WHITE"):
     text = getattr(Fore, color, None) + text + Style.RESET_ALL
 
     return text
+
+
+def is_hex_str(checked_str: str) -> bool:
+    return all(item in string.hexdigits for item in checked_str)

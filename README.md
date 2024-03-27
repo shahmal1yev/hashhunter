@@ -19,7 +19,7 @@ HashHunter's newest feature allows users to directly upload a hash list to the t
 - Identify hash values from a specified file and save only the most possible hash groups:
 
 ```shell
-hashunter -H path/to/hash_list.txt --group
+hashhunter -H path/to/hash_list.txt --group
 ```
 
 - Identify hash values from a specified file and save both the most and least possible hash groups:

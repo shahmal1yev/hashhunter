@@ -3,7 +3,7 @@ from helpers import is_hex_str
 
 
 class SHA1(Identifier):
-    ALGORITHM_NAME = "SHA1"
+    algorithm_name: str = "SHA1"
     BYTE_LENGTH = 40
 
     def __init__(self, hash_value):

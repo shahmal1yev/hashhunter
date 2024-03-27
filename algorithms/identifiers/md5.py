@@ -3,7 +3,7 @@ from helpers import is_hex_str
 
 
 class MD5(Identifier):
-    ALGORITHM_NAME = "MD5"
+    algorithm_name: str = "MD5"
     BYTE_LENGTH = 32
 
     def __init__(self, hash_value: str):

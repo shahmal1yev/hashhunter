@@ -5,7 +5,7 @@ from helpers import is_hex_str
 
 
 class SHA2256(Identifier):
-    ALGORITHM_NAME = "SHA2256"
+    algorithm_name: str = "SHA2256"
     BYTE_LENGTH = 64
 
     def __init__(self, hash_value: str):

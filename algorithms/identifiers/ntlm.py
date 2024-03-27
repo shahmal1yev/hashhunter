@@ -3,7 +3,7 @@ from helpers import is_hex_str
 
 
 class NTLM(Identifier):
-    ALGORITHM_NAME = "NTLM"
+    algorithm_name: str = "NTLM"
     BYTE_LENGTH = 32
 
     def __init__(self, hash_value: str):

@@ -43,10 +43,10 @@ if __name__ == '__main__':
 
             table.setdefault('Hash Value', []).append(hash_value)
             table.setdefault('Most Possible', []).append(
-                ", ".join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].ALGORITHM_NAME,
+                ", ".join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].algorithm_name,
                               sorted_hashcat_codes[:constants.MOST_POSSIBLE_LENGTH])))
             table.setdefault('Least Possible', []).append(
-                ", ".join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].ALGORITHM_NAME,
+                ", ".join(map(lambda code: constants.ACTIVE_ALGORITHMS[code].algorithm_name,
                               sorted_hashcat_codes[constants.MOST_POSSIBLE_LENGTH:])))
 
         info = "\n\n" + tabulate(table, headers="keys", tablefmt="fancy_grid")

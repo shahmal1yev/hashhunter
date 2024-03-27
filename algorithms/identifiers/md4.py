@@ -3,7 +3,7 @@ from helpers import is_hex_str
 
 
 class MD4(Identifier):
-    ALGORITHM_NAME = "MD4"
+    algorithm_name: str = "MD4"
     BYTE_LENGTH = 32
 
     def __init__(self, hash_value: str):
